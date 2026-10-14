@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NothingLost: read messages people delete</title>
 <meta name="description" content="Someone deleted a message before you could read it? NothingLost keeps a private copy of the messages that reach your phone, so you can still see what they sent. No account, no ads.">
-<link rel="canonical" href="https://ahaariyan.github.io/nothinglost/">
+<link rel="canonical" href="https://ahaariyan.github.io/nothinglost_landing_page/">
 <meta name="theme-color" content="#3d51d1">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="NothingLost: read messages people delete">
 <meta property="og:description" content="A private copy of the messages that reach your phone. When someone deletes one, you still see what they sent.">
-<meta property="og:url" content="https://ahaariyan.github.io/nothinglost/">
-<meta property="og:image" content="https://ahaariyan.github.io/nothinglost/assets/og.png">
+<meta property="og:url" content="https://ahaariyan.github.io/nothinglost_landing_page/">
+<meta property="og:image" content="https://ahaariyan.github.io/nothinglost_landing_page/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"NothingLost","operatingSystem":"Android",
- "applicationCategory":"UtilitiesApplication","url":"https://ahaariyan.github.io/nothinglost/",
+ "applicationCategory":"UtilitiesApplication","url":"https://ahaariyan.github.io/nothinglost_landing_page/",
  "installUrl":"https://play.google.com/store/apps/details?id=com.nothinglost.app",
  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
 </script>
@@ -40,10 +40,7 @@
         <h1>They deleted it.<br><span>You can still read it.</span></h1>
         <p class="lead">NothingLost keeps a private copy of the messages that reach your phone. When someone takes one back, you still see what they sent.</p>
         <div class="cta">
-          <a class="btn btn-play" data-play href="https://play.google.com/store/apps/details?id=com.nothinglost.app">
-            <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4 2.6v18.8c0 .5.5.8.9.6l16.3-9.4c.4-.2.4-.9 0-1.1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
-            <span><small>Get it on</small>Google Play</span>
-          </a>
+          <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.nothinglost.app"><img src="assets/google-play-badge.png" alt="Get it on Google Play" width="215" height="64"></a>
           <p class="cta-note">Free for Android. No account. No ads.</p>
         </div>
       </div>
@@ -189,10 +186,7 @@
     <div class="wrap final-in">
       <img src="assets/icon-192.png" alt="" width="96" height="96">
       <h2>Never wonder what they said.</h2>
-      <a class="btn btn-play light" data-play href="https://play.google.com/store/apps/details?id=com.nothinglost.app">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M4 2.6v18.8c0 .5.5.8.9.6l16.3-9.4c.4-.2.4-.9 0-1.1L4.9 2c-.4-.2-.9.1-.9.6z"/></svg>
-        <span><small>Get it on</small>Google Play</span>
-      </a>
+      <a class="play-badge" data-play href="https://play.google.com/store/apps/details?id=com.nothinglost.app"><img src="assets/google-play-badge.png" alt="Get it on Google Play" width="215" height="64"></a>
     </div>
   </section>
 </main>
@@ -215,7 +209,7 @@
   var ref = "&referrer=" + encodeURIComponent(tags.join("&"));
   document.querySelectorAll("a[data-play]").forEach(function (a) { a.href += ref; });
   // Show the bar at the bottom only once the main button has scrolled away.
-  var bar = document.querySelector(".sticky"), hero = document.querySelector(".hero .btn-play");
+  var bar = document.querySelector(".sticky"), hero = document.querySelector(".hero .play-badge");
   if ("IntersectionObserver" in window) new IntersectionObserver(function (e) {
     bar.classList.toggle("on", !e[0].isIntersecting && e[0].boundingClientRect.top < 0);
   }).observe(hero);
