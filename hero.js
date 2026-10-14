@@ -9,9 +9,14 @@
   var STATES = ["typing", "sent", "fly", "awake", "press", "menu", "pick", "deleted", "alert", "tap", "open", "fade"];
 
   // Scale the scene (760px wide, 660px on phones) to fit its box.
+  // It also fits the height left in the first screen, so the whole story shows without scrolling.
   function fit() {
-    var inner = scene.querySelector(".scene-in"), w = scene.parentElement.clientWidth - 16;
-    scene.style.setProperty("--k", Math.min(1, w / inner.offsetWidth).toFixed(3));
+    var inner = scene.querySelector(".scene-in"), hero = scene.closest(".hero");
+    var byWidth = (scene.parentElement.clientWidth - 16) / inner.offsetWidth;
+    var others = hero.offsetHeight - scene.offsetHeight + hero.offsetTop;   // everything in the first screen but the phones
+    var byHeight = (innerHeight - others) / inner.offsetHeight;
+    var k = Math.min(1, byWidth, Math.max(byHeight, 0.5));
+    scene.style.setProperty("--k", k.toFixed(3));
   }
   fit();
   addEventListener("resize", fit);
