@@ -13,9 +13,13 @@
 <meta property="og:title" content="NothingLost: read messages people delete">
 <meta property="og:description" content="A private copy of the messages that reach your phone. When someone deletes one, you still see what they sent.">
 <meta property="og:url" content="https://nothinglost.matrabhed.com/">
-<meta property="og:image" content="https://nothinglost.matrabhed.com/assets/og.png">
+<meta property="og:image" content="https://nothinglost.matrabhed.com/assets/og-share.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="styles.css?v=1792164227">
+<meta name="twitter:image" content="https://nothinglost.matrabhed.com/assets/og-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NothingLost: they deleted it, you can still read it.">
+<link rel="stylesheet" href="styles.css?v=1792165523">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"NothingLost","operatingSystem":"Android",
  "applicationCategory":"UtilitiesApplication","url":"https://nothinglost.matrabhed.com/",
@@ -34,13 +38,34 @@
 </header>
 
 <main id="main">
-  <section class="hero">
-    <div class="wrap hero-in">
-      <h1>They deleted it.<br>You can still <span>read it.</span></h1>
-      <p class="lead">NothingLost keeps a private copy of the messages that reach your phone, so a deleted message is never really gone.</p>
-      <div class="actions">
-        <a class="btn btn-dark" data-play href="https://play.google.com/store/apps/details?id=com.nothinglost.app"><img src="assets/play-logo.png" alt="" width="18" height="20">Get it on Google Play</a>
+  <!-- First screen: one still picture that also works as the link preview (assets/og-share.png is drawn from og-share.html, the same scene). -->
+  <section class="intro">
+    <div class="i-bg" aria-hidden="true"></div>
+    <div class="wrap i-in">
+      <div class="i-copy">
+        <p class="i-pill"><img src="assets/icon-192.png" alt="" width="22" height="22">NothingLost for Android</p>
+        <h1>They deleted it.<br>You can still <span>read it.</span></h1>
+        <p class="i-lead">NothingLost keeps a private copy of the messages that reach your phone, so a deleted message is never really gone.</p>
+        <div class="i-actions">
+          <a class="btn btn-dark btn-lg" data-play href="https://play.google.com/store/apps/details?id=com.nothinglost.app"><img src="assets/play-logo.png" alt="" width="18" height="20">Get it on Google Play</a>
+          <a class="btn btn-line btn-lg" href="#see">See how it works</a>
+        </div>
+        <ul class="i-trust"><li>Free to start</li><li>No account</li><li>Stays on your phone</li></ul>
       </div>
+      <div class="i-art">
+        <div class="i-orb" aria-hidden="true"></div>
+        <div class="i-phone"><img src="assets/03_detail.webp" alt="NothingLost showing a message Rahim deleted: I'll send the money tonight, promise" width="600" height="1267"></div>
+        <div class="i-card i-gone" aria-hidden="true"><small>Rahim</small><span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M6 18L18 6"/></svg>This message was deleted</span></div>
+        <div class="i-card i-alert" aria-hidden="true"><img src="assets/icon-192.png" alt=""><div><small>NothingLost · now</small><b>Rahim deleted a message</b><span>I'll send the money tonight, promise</span></div></div>
+        <div class="i-card i-chip" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Saved before they deleted it</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero" id="see">
+    <div class="wrap hero-in">
+      <div class="st-head"><p class="kicker">See it happen</p><h2 class="sec-title">Watch what happens<br>when they <em>delete it.</em></h2></div>
+      <p class="lead">A real moment, played out on two phones. The steps light up as it happens.</p>
       <ol class="beats" id="beats">
         <li><b>1</b>Rahim sends you a message.</li>
         <li><b>2</b>Your phone is asleep. The notification arrives.</li>
@@ -261,8 +286,8 @@
   </div>
 </footer>
 
-<script src="page.js?v=1792164227" defer></script>
-<script src="hero.js?v=1792164227" defer></script>
+<script src="page.js?v=1792165523" defer></script>
+<script src="hero.js?v=1792165523" defer></script>
 <script>
 // Pass the visit's utm_* tags on to Google Play, so Play Console shows which post sent the install.
 (function () {

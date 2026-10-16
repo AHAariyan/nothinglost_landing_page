@@ -10,14 +10,13 @@
   var STATES = ["typing", "sent", "fly", "awake", "press", "menu", "pick", "deleted", "tapnote", "chat", "alert", "tap", "open", "fade"];
   var BEAT = { typing: 0, awake: 1, press: 2, tapnote: 3, alert: 4 };
 
-  // Scale the scene to its box, and on wide screens also to the height of the first screen,
-  // so the whole story shows without scrolling.
+  // Scale the scene to its box, and on wide screens also to the screen's height,
+  // so the whole story fits in view at once.
   function fit() {
     var stage = scene.parentElement;
     var k = (stage.clientWidth - 32) / inner.offsetWidth;
     if (innerWidth > 900) {
-      var top = scene.closest(".hero").getBoundingClientRect().top + scrollY;
-      k = Math.min(k, (innerHeight - top - 120) / inner.offsetHeight);
+      k = Math.min(k, (innerHeight - 150) / inner.offsetHeight);
     }
     scene.style.setProperty("--k", Math.max(0.45, Math.min(1, k)).toFixed(3));
   }
