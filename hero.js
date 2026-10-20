@@ -1,5 +1,5 @@
 // The hero scene: Rahim sends a message, your sleeping phone gets the notification, Rahim deletes it
-// for everyone, you open the chat and it's gone, and NothingLost shows the copy it kept. Loops.
+// for everyone, you open the chat and it's gone, and Recover shows the copy it kept. Loops.
 (function () {
   var scene = document.getElementById("scene");
   var beats = document.querySelectorAll("#beats li");

@@ -1,6 +1,6 @@
-# NothingLost landing page
+# Recover landing page (formerly NothingLost)
 
-Static landing page for the NothingLost Android app (`com.nothinglost.app`), served by GitHub Pages:
+Static landing page for Recover: See Deleted Messages (formerly NothingLost) (`com.nothinglost.app`), served by GitHub Pages:
 **https://nothinglost.matrabhed.com/** (custom domain, CNAME; repo `AHAariyan/nothinglost_landing_page`).
 
 - `index.html`, `styles.css`: the whole page. No build step, no frameworks, no web fonts, no trackers.

@@ -1,6 +1,6 @@
-/* NothingLost landing page: white, the brand blue and the icon's mint; the hero plays the story, the sections below tell it. */
+/* Recover landing page: white, the brand indigo and its lime highlight (matching the app icon and Play listing); the hero plays the story, the sections below tell it. */
 :root {
-  --ink: #1f1f1f; --ink-2: #444746; --ink-3: #5e5e5e; --brand: #3d51d1;
+  --ink: #1f1f1f; --ink-2: #444746; --ink-3: #5e5e5e; --brand: #3D4FD6;
   --tint: #eef1fc; --tint-2: #f6f7fb; --line: #e3e3e3; --radius: 32px;
 }
 * { box-sizing: border-box; }
@@ -38,24 +38,24 @@ p { margin: 0; }
 .intro { position: relative; overflow: hidden; padding: 40px 0 88px; }
 .i-bg { position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(42% 55% at 78% 42%, rgba(111,128,255,.26), transparent 70%),
-              radial-gradient(30% 40% at 95% 88%, rgba(143,240,200,.38), transparent 70%),
-              radial-gradient(28% 36% at 4% 6%, rgba(143,240,200,.20), transparent 70%),
+              radial-gradient(30% 40% at 95% 88%, rgba(201,242,122,.38), transparent 70%),
+              radial-gradient(28% 36% at 4% 6%, rgba(201,242,122,.20), transparent 70%),
               linear-gradient(180deg, #f6f7ff, #fff 85%); }
 .i-in { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; min-height: min(720px, calc(100vh - 110px)); }
 .i-pill { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px; border-radius: 999px; background: rgba(255,255,255,.8);
-  box-shadow: 0 0 0 1px rgba(61,81,209,.12), 0 6px 20px rgba(61,81,209,.08); font-size: 14px; font-weight: 600; color: var(--ink-2); }
+  box-shadow: 0 0 0 1px rgba(61,79,214,.12), 0 6px 20px rgba(61,79,214,.08); font-size: 14px; font-weight: 600; color: var(--ink-2); }
 .i-pill img { border-radius: 7px; }
 .intro h1 { font-size: clamp(44px, 5.6vw, 80px); line-height: 1.02; letter-spacing: -.045em; margin-top: 26px; }
-.intro h1 span { background: linear-gradient(100deg, var(--brand) 10%, #2fb88a 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.intro h1 span { background: linear-gradient(100deg, var(--brand) 10%, #5E9A12 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .i-lead { font-size: 20px; color: var(--ink-2); max-width: 30em; margin-top: 24px; }
 .i-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
 .i-actions .btn-lg { margin-top: 0; }
 .i-trust { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 15px; color: var(--ink-2); }
-.i-trust li::before { content: ""; display: inline-block; width: 7px; height: 12px; margin-right: 10px; border-right: 2px solid #2fb88a; border-bottom: 2px solid #2fb88a; transform: rotate(45deg) translateY(-2px); }
+.i-trust li::before { content: ""; display: inline-block; width: 7px; height: 12px; margin-right: 10px; border-right: 2px solid #5E9A12; border-bottom: 2px solid #5E9A12; transform: rotate(45deg) translateY(-2px); }
 
 .i-art { position: relative; height: 640px; display: grid; place-items: center; }
 .i-orb { position: absolute; width: 520px; height: 520px; border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, rgba(143,240,200,.75), transparent 58%), radial-gradient(circle at 68% 62%, rgba(111,128,255,.6), transparent 62%); filter: blur(24px); }
+  background: radial-gradient(circle at 35% 35%, rgba(201,242,122,.75), transparent 58%), radial-gradient(circle at 68% 62%, rgba(111,128,255,.6), transparent 62%); filter: blur(24px); }
 .i-phone { position: relative; width: 290px; height: 600px; border: 10px solid #1f1f1f; border-radius: 48px; overflow: hidden; background: #fff;
   box-shadow: 0 50px 90px rgba(20,27,77,.25); }
 .i-phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
@@ -71,7 +71,7 @@ p { margin: 0; }
 .i-alert b { display: block; font-size: 16px; margin-top: 2px; }
 .i-alert span { display: block; font-size: 14px; color: var(--ink-2); margin-top: 2px; }
 .i-chip { left: 18px; bottom: 70px; display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; font-size: 15px; font-weight: 600;
-  color: #11603f; background: #dcf8ec; animation-delay: -4.5s; }
+  color: #2F4D00; background: #E9FAC4; animation-delay: -4.5s; }
 @keyframes drift { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 
 /* See it happen: the words on the left, the story played out on two phones on the right */
@@ -132,7 +132,7 @@ p { margin: 0; }
 .wire { align-self: center; margin-top: -40px; width: 120px; height: 2px; position: relative;
   background-image: linear-gradient(90deg, #b9c2e8 50%, transparent 0); background-size: 10px 2px; }
 .packet { position: absolute; left: 0; top: -6px; width: 14px; height: 14px; border-radius: 50%; background: var(--brand); opacity: 0;
-  box-shadow: 0 0 0 6px rgba(61,81,209,.18); }
+  box-shadow: 0 0 0 6px rgba(61,79,214,.18); }
 
 /* Your phone: asleep on the lock screen, then the chat, then NothingLost */
 .b-lock { position: absolute; inset: 0; color: #fff; padding: 12px 16px;
@@ -155,7 +155,7 @@ p { margin: 0; }
 .b-alert { position: absolute; left: 10px; right: 10px; top: 10px; background: #fff; color: #1f1f1f; border-radius: 22px; padding: 12px 14px 14px;
   box-shadow: 0 14px 34px rgba(0,0,0,.35); outline: 3px solid var(--brand); transform: translateY(-140%); transition: transform .5s cubic-bezier(.2,.9,.3,1.15); }
 .b-alert .n-head { color: var(--brand); font-weight: 600; }
-.tap-dot { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; background: rgba(61,81,209,.25); opacity: 0; transform: scale(.4); }
+.tap-dot { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; background: rgba(61,79,214,.25); opacity: 0; transform: scale(.4); }
 .b-app { position: absolute; inset: 0; background: #f7f7fb; color: #1f1f1f; padding: 14px 16px; transform: translateY(100%); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
 .b-app-top { font-size: 20px; color: #444; }
 .b-app-who { text-align: center; margin-top: 18px; }
@@ -200,9 +200,9 @@ p { margin: 0; }
 .sec { padding: 128px 0 0; scroll-margin-top: 72px; }
 .sec-head { text-align: center; max-width: 760px; margin: 0 auto; }
 .kicker { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--brand); }
-.kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(143,240,200,.35); }
+.kicker::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 4px rgba(201,242,122,.35); }
 .sec-title { font-size: clamp(32px, 4.4vw, 54px); line-height: 1.1; letter-spacing: -.03em; margin-top: 14px; text-wrap: balance; }
-.sec-title em { font-style: normal; background: linear-gradient(transparent 62%, rgba(143,240,200,.7) 0); padding: 0 .06em; }
+.sec-title em { font-style: normal; background: linear-gradient(transparent 62%, rgba(201,242,122,.7) 0); padding: 0 .06em; }
 .sec-sub { color: var(--ink-2); font-size: 18px; margin-top: 18px; }
 .sec-sub a { color: var(--brand); font-weight: 500; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
@@ -233,7 +233,7 @@ p { margin: 0; }
 .h-steps::before { content: ""; position: absolute; top: 32px; left: 16.6%; right: 16.6%; height: 2px;
   background: linear-gradient(90deg, var(--brand), var(--mint)); opacity: .35; }
 .h-dot { position: relative; display: grid; place-items: center; width: 64px; height: 64px; margin: 0 auto 22px; border-radius: 22px; background: #fff;
-  box-shadow: 0 10px 30px rgba(61,81,209,.16), inset 0 0 0 1px rgba(61,81,209,.12); }
+  box-shadow: 0 10px 30px rgba(61,79,214,.16), inset 0 0 0 1px rgba(61,79,214,.12); }
 .h-dot svg { width: 28px; height: 28px; fill: none; stroke: var(--brand); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .h-steps h3 { font-size: 21px; margin-bottom: 8px; }
 .h-steps p { color: var(--ink-2); font-size: 16px; max-width: 22em; margin: 0 auto; }
@@ -249,14 +249,14 @@ p { margin: 0; }
 .t-tab.on h3 { color: var(--ink); }
 .t-tab.on p { max-height: 120px; opacity: 1; }
 .t-tab:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
-.t-bar { position: absolute; left: 26px; right: 26px; bottom: 10px; height: 3px; border-radius: 3px; background: rgba(61,81,209,.12); opacity: 0; }
+.t-bar { position: absolute; left: 26px; right: 26px; bottom: 10px; height: 3px; border-radius: 3px; background: rgba(61,79,214,.12); opacity: 0; }
 .t-bar::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--brand); transform: scaleX(0); transform-origin: left; }
 .t-tab.on .t-bar { opacity: 1; }
 .tour.auto .t-tab.on .t-bar::after { animation: bar 6s linear forwards; }
 @keyframes bar { to { transform: scaleX(1); } }
 .t-stage { position: relative; display: grid; place-items: center; padding: 24px 0; }
 .t-glow { position: absolute; width: 440px; height: 440px; border-radius: 50%; filter: blur(10px);
-  background: radial-gradient(circle at 35% 35%, rgba(143,240,200,.55), transparent 60%), radial-gradient(circle at 65% 65%, rgba(111,128,255,.45), transparent 62%); }
+  background: radial-gradient(circle at 35% 35%, rgba(201,242,122,.55), transparent 60%), radial-gradient(circle at 65% 65%, rgba(111,128,255,.45), transparent 62%); }
 .t-device { position: relative; width: 300px; height: 620px; border: 10px solid #1f1f1f; border-radius: 48px; overflow: hidden; background: #fff;
   box-shadow: 0 40px 80px rgba(31,31,31,.2); }
 .t-device img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; opacity: 0; transform: scale(1.03); transition: opacity .5s ease, transform .6s ease; }
@@ -265,14 +265,14 @@ p { margin: 0; }
 
 /* Privacy: a dark room with three zeros */
 .vault { margin-top: 128px; padding: 120px 0; color: #fff; overflow: hidden; position: relative;
-  background: radial-gradient(50% 60% at 15% 20%, rgba(111,128,255,.35), transparent 70%), radial-gradient(40% 50% at 90% 90%, rgba(143,240,200,.18), transparent 70%), #0b1033; }
+  background: radial-gradient(50% 60% at 15% 20%, rgba(111,128,255,.35), transparent 70%), radial-gradient(40% 50% at 90% 90%, rgba(201,242,122,.18), transparent 70%), #0b1033; }
 .vault .kicker { color: var(--mint); }
 .vault .sec-title em { background: none; color: var(--mint); }
 .vault .sec-sub { color: #c4cbf2; }
 .v-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 64px auto 0; max-width: 960px; }
 .v-stats div { text-align: center; padding: 34px 20px; border-radius: 28px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1); }
 .v-stats b { display: block; font-family: "Google Sans", Roboto, -apple-system, sans-serif; font-size: clamp(72px, 9vw, 112px); line-height: 1; font-weight: 500;
-  background: linear-gradient(180deg, #fff, #8ff0c8); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  background: linear-gradient(180deg, #fff, #D7F59A); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .v-stats span { display: block; margin-top: 12px; color: #c4cbf2; font-size: 16px; }
 .v-foot { text-align: center; color: #a9b0d8; font-size: 15px; margin-top: 40px; }
 .v-foot a { color: var(--mint); font-weight: 500; margin-left: 6px; }
@@ -282,7 +282,7 @@ p { margin: 0; }
 .p-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 420px)); justify-content: center; gap: 24px; margin-top: 56px; }
 .p-card { border-radius: 28px; padding: 38px; background: var(--tint-2); }
 .p-card.pro { background: linear-gradient(#fff, #fff) padding-box, linear-gradient(135deg, var(--brand), #4fd6a4) border-box; border: 3px solid transparent;
-  box-shadow: 0 30px 60px rgba(61,81,209,.14); }
+  box-shadow: 0 30px 60px rgba(61,79,214,.14); }
 .p-card h3 { font-size: 22px; }
 .p-card.pro h3 { color: var(--brand); }
 .p-amt { font-family: "Google Sans", Roboto, -apple-system, sans-serif; font-size: 48px; font-weight: 500; letter-spacing: -.02em; margin: 6px 0 22px; }
