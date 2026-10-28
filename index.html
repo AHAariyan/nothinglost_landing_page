@@ -274,6 +274,30 @@
     </div>
   </section>
 
+  <!-- Email list. Hidden until data-endpoint holds the provider's form URL (see the email-list README in the growth kit). -->
+  <section class="sec signup" id="signup" aria-labelledby="signup-h" data-endpoint="" data-field="email_address" hidden>
+    <div class="wrap">
+      <div class="su-card reveal">
+        <div class="su-copy">
+          <p class="kicker">Stay in the loop</p>
+          <h2 id="signup-h" class="su-title">New features and tips, <em>now and then.</em></h2>
+          <p class="su-sub">What's new in Recover and small tips for getting more out of it.</p>
+        </div>
+        <form class="su-form" method="post" target="su-frame">
+          <label class="su-label" for="su-email">Email address</label>
+          <div class="su-row">
+            <input id="su-email" type="email" required autocomplete="email" inputmode="email" spellcheck="false" placeholder="you@example.com" aria-describedby="su-fine">
+            <button class="btn btn-dark" type="submit">Subscribe</button>
+          </div>
+          <div class="su-trap" aria-hidden="true"><label>Leave this empty <input type="text" tabindex="-1" autocomplete="off"></label></div>
+          <p class="su-fine" id="su-fine">One short email when there's something new. Unsubscribe anytime. <a href="https://ahaariyan.github.io/NothingLostPrivacyPolicy/">Privacy policy</a></p>
+          <p class="su-status" role="status" aria-live="polite"></p>
+        </form>
+        <iframe name="su-frame" title="Signup response" hidden></iframe>
+      </div>
+    </div>
+  </section>
+
   <!-- The last word: one more deleted message turns into the promise. -->
   <section class="sec end" id="get">
     <div class="wrap e-in">
@@ -292,7 +316,7 @@
   </div>
 </footer>
 
-<script src="page.js?v=1792471000" defer></script>
+<script src="page.js?v=1792471001" defer></script>
 <script src="hero.js?v=1792471000" defer></script>
 <script>
 // Pass the visit's utm_* tags on to Google Play, so Play Console shows which post sent the install.

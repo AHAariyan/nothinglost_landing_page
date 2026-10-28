@@ -388,3 +388,24 @@ details p { color: var(--ink-2); padding: 0 4px 24px; }
   * { transition: none !important; animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Email signup (hidden until configured; see page.js) */
+.signup[hidden] { display: none; }
+.su-card { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; max-width: 1000px; margin: 0 auto; padding: 48px;
+  border-radius: var(--radius); background: radial-gradient(60% 90% at 100% 0%, rgba(201,242,122,.35), transparent 70%), var(--tint); }
+.su-title { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.12; letter-spacing: -.03em; margin-top: 14px; text-wrap: balance; }
+.su-title em { font-style: normal; color: var(--brand); }
+.su-sub { color: var(--ink-2); margin-top: 14px; }
+.su-label { display: block; font-size: 15px; font-weight: 500; margin-bottom: 8px; }
+.su-row { display: flex; gap: 10px; }
+.su-row input { flex: 1; min-width: 0; height: 48px; padding: 0 20px; border-radius: 999px; border: 1px solid #c4c7c5; background: #fff; color: var(--ink); font: inherit; font-size: 16px; }
+.su-row input:focus-visible { border-color: var(--brand); }
+.su-row .btn { border: 0; cursor: pointer; font-family: inherit; flex: none; }
+.su-row .btn:disabled { opacity: .6; cursor: default; }
+.su-trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.su-fine { font-size: 14px; color: var(--ink-3); margin-top: 12px; }
+.su-fine a { color: var(--brand); }
+.su-status { font-weight: 500; color: #2f6a00; margin-top: 10px; }
+.su-status:empty { display: none; }
+@media (max-width: 900px) { .su-card { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px; } }
+@media (max-width: 560px) { .su-row { flex-direction: column; } .su-row .btn { justify-content: center; } }
