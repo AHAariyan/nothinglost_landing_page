@@ -1,6 +1,6 @@
 /* Recover landing page: white, the brand indigo and its lime highlight (matching the app icon and Play listing); the hero plays the story, the sections below tell it. */
 :root {
-  --ink: #1f1f1f; --ink-2: #444746; --ink-3: #5e5e5e; --brand: #3D4FD6;
+  --ink: #1f1f1f; --ink-2: #444746; --ink-3: #5e5e5e; --brand: #3D4FD6; --mint: #C9F27A;
   --tint: #eef1fc; --tint-2: #f6f7fb; --line: #e3e3e3; --radius: 32px;
 }
 * { box-sizing: border-box; }
