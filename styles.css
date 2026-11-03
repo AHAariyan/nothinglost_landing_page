@@ -42,7 +42,7 @@ p { margin: 0; }
               radial-gradient(28% 36% at 4% 6%, rgba(201,242,122,.20), transparent 70%),
               linear-gradient(180deg, #f6f7ff, #fff 85%); }
 .i-in { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding-top: 24px; }
-.tiles { list-style: none; padding: 0; margin: 34px 0 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; max-width: 1140px; }
+.tiles { list-style: none; padding: 0; margin: 40px 0 48px; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; max-width: 1140px; }
 .tile { position: relative; width: 128px; height: 128px; border-radius: 32px; background: var(--c); color: #fff; display: flex; flex-direction: column;
   align-items: center; justify-content: flex-end; padding-bottom: 16px; box-shadow: 0 16px 36px rgba(20,27,77,.14); }
 .tile b { font-size: 15px; font-weight: 600; }
@@ -58,9 +58,9 @@ p { margin: 0; }
 .i-pill { display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px; border-radius: 999px; background: rgba(255,255,255,.8);
   box-shadow: 0 0 0 1px rgba(61,79,214,.12), 0 6px 20px rgba(61,79,214,.08); font-size: 14px; font-weight: 600; color: var(--ink-2); }
 .i-pill img { border-radius: 7px; }
-.intro h1 { font-size: clamp(40px, 5.4vw, 76px); line-height: 1.04; letter-spacing: -.045em; }
+.intro h1 { font-size: clamp(42px, 5.8vw, 84px); line-height: 1.02; letter-spacing: -.05em; }
 .intro h1 span { background: linear-gradient(100deg, var(--brand) 10%, #5E9A12 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.i-lead { font-size: 20px; color: var(--ink-2); max-width: 34em; margin-top: 20px; }
+.i-lead { font-size: clamp(18px, 1.6vw, 22px); color: var(--ink-3); max-width: 32em; margin-top: 20px; }
 .i-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 32px; }
 .i-actions .btn-lg { margin-top: 0; }
 .foot-note { color: var(--ink-3); font-size: 12px; }
