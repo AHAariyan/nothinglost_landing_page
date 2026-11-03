@@ -50,6 +50,13 @@ p { margin: 0; }
 .i-lead { font-size: 20px; color: var(--ink-2); max-width: 30em; margin-top: 24px; }
 .i-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
 .i-actions .btn-lg { margin-top: 0; }
+.i-apps { margin-top: 28px; display: grid; gap: 10px; }
+.i-apps p { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.i-apps-k { font-size: 13px; font-weight: 700; letter-spacing: .02em; color: var(--ink-3); margin-right: 4px; }
+.app-chip { display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; font-size: 14px; font-weight: 600;
+  background: var(--ink); color: #fff; }
+.app-chip.soft { background: rgba(255,255,255,.85); color: var(--ink-2); box-shadow: 0 0 0 1px rgba(61,79,214,.14); }
+.foot-note { color: var(--ink-3); font-size: 12px; }
 .i-trust { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 15px; color: var(--ink-2); }
 .i-trust li::before { content: ""; display: inline-block; width: 7px; height: 12px; margin-right: 10px; border-right: 2px solid #5E9A12; border-bottom: 2px solid #5E9A12; transform: rotate(45deg) translateY(-2px); }
 
@@ -328,7 +335,8 @@ details p { color: var(--ink-2); padding: 0 4px 24px; }
   .intro { padding: 24px 0 56px; text-align: center; }
   .i-in { grid-template-columns: minmax(0, 1fr); gap: 8px; min-height: 0; }
   .i-lead { margin-inline: auto; font-size: 18px; }
-  .i-actions, .i-trust { justify-content: center; }
+  .i-actions, .i-trust, .i-apps p { justify-content: center; }
+  .i-apps-k { width: 100%; margin-right: 0; }
   .i-art { height: 560px; transform: scale(.86); margin: -20px 0 -60px; }
   .i-orb { width: 400px; height: 400px; }
   .i-gone { left: 0; top: 60px; }
