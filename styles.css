@@ -51,6 +51,13 @@ p { margin: 0; }
 .rot-w { grid-area: 1 / 1; opacity: 0; transform: translateY(.35em); transition: opacity .45s ease, transform .45s ease; white-space: nowrap; }
 .rot-w.is-on { opacity: 1; transform: none; }
 .i-lead b { color: var(--ink); font-weight: 600; }
+/* Next to the rotating name: there is more than these two. Points at the line that names the rest. */
+.more-chip { display: inline-flex; align-items: center; vertical-align: .55em; margin-left: .3em; padding: .28em .7em; border-radius: 999px;
+  font: 600 clamp(13px, 1.25vw, 18px)/1 "Google Sans Text", Roboto, sans-serif; letter-spacing: 0; text-decoration: none; white-space: nowrap;
+  color: var(--brand); background: rgba(61,79,214,.10); box-shadow: 0 0 0 1px rgba(61,79,214,.18); }
+.more-chip:hover { background: rgba(61,79,214,.16); }
+#apps:target { animation: flash 1.6s ease; }
+@keyframes flash { 0%, 40% { background: rgba(201,242,122,.55); border-radius: 12px; } 100% { background: transparent; } }
 .intro h1 .rot-w { background: linear-gradient(100deg, var(--brand) 10%, #5E9A12 95%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .i-lead { font-size: 20px; color: var(--ink-2); max-width: 30em; margin-top: 24px; }
 .i-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 34px; }
