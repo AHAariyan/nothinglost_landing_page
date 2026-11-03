@@ -46,9 +46,9 @@ p { margin: 0; }
 .tile { position: relative; width: 128px; height: 128px; border-radius: 32px; background: var(--c); color: #fff; display: flex; flex-direction: column;
   align-items: center; justify-content: flex-end; padding-bottom: 16px; box-shadow: 0 16px 36px rgba(20,27,77,.14); }
 .tile b { font-size: 15px; font-weight: 600; }
-.t-ic { position: absolute; top: 24px; left: 50%; transform: translateX(-50%); width: 52px; height: 52px; border-radius: 16px; background: rgba(255,255,255,.22);
+.t-ic { position: absolute; top: 24px; left: 50%; transform: translateX(-50%); width: 52px; height: 52px; border-radius: 16px; background: transparent;
   display: grid; place-items: center; }
-.t-ic svg { width: 26px; height: 26px; fill: #fff; }
+.t-ic svg { width: 34px; height: 34px; fill: #fff; }
 .t-tag { position: absolute; top: 9px; right: 10px; font-size: 11px; font-weight: 700; line-height: 1; padding: 4px 8px; border-radius: 999px;
   background: rgba(255,255,255,.9); color: #2f5f00; }
 .t-tag.t-del { color: #9c2a17; }
@@ -345,7 +345,7 @@ details p { color: var(--ink-2); padding: 0 4px 24px; }
   .tile { width: calc((100vw - 48px - 30px) / 4); height: calc((100vw - 48px - 30px) / 4); border-radius: 22px; padding-bottom: 9px; }
   .tile b { font-size: 11px; }
   .t-ic { top: 12px; width: 34px; height: 34px; border-radius: 11px; }
-  .t-ic svg { width: 18px; height: 18px; }
+  .t-ic svg { width: 24px; height: 24px; }
   .t-tag { top: -7px; right: 50%; transform: translateX(50%); font-size: 9px; padding: 3px 6px; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
   .i-lead { margin-inline: auto; font-size: 18px; }
   .i-actions, .i-trust { justify-content: center; }
