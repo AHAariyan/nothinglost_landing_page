@@ -23,7 +23,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Recover: they deleted it, you can still read it.">
-<link rel="stylesheet" href="styles.css?v=1792471100">
+<link rel="stylesheet" href="styles.css?v=1792471200">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Recover: See Deleted Messages","alternateName":"NothingLost","operatingSystem":"Android",
  "applicationCategory":"UtilitiesApplication","url":"https://recover.matrabhed.com/",
@@ -48,17 +48,12 @@
     <div class="wrap i-in">
       <div class="i-copy">
         <p class="i-pill"><img src="assets/icon-192.png" alt="" width="22" height="22">Recover for Android · formerly NothingLost</p>
-        <h1>They deleted it.<br>You can still <span>read it.</span></h1>
-        <p class="i-lead">Recover keeps a private copy of the messages that reach your phone, so a deleted or edited message is never really gone.</p>
+        <!-- The apps are the message: the headline names the ones where a deletion is really recognised. -->
+        <h1 aria-label="Read deleted WhatsApp and Messenger messages.">Read deleted<br><span class="rot" id="rot" aria-hidden="true"><span class="rot-w is-on">WhatsApp</span><span class="rot-w">Messenger</span></span><br>messages.</h1>
+        <p class="i-lead">WhatsApp Business too. Plus a saved copy of every chat from <b>Telegram</b>, <b>Instagram</b>, <b>Signal</b>, <b>Viber</b>, and any app that notifies you. Private, on your phone.</p>
         <div class="i-actions">
           <a class="btn btn-dark btn-lg" data-play href="https://play.google.com/store/apps/details?id=com.nothinglost.app"><img src="assets/play-logo.png" alt="" width="18" height="20">Get it on Google Play</a>
           <a class="btn btn-line btn-lg" href="#see">See how it works</a>
-        </div>
-        <!-- Two tiers, exactly as the app works: deletions are only recognised where the app gives a real signal
-             (VanishPolicy, DeletionPlaceholders); everywhere else it keeps a copy. -->
-        <div class="i-apps" aria-label="Works with">
-          <p><span class="i-apps-k">Shows deleted messages from</span><span class="app-chip">WhatsApp</span><span class="app-chip">WhatsApp Business</span><span class="app-chip">Messenger</span></p>
-          <p><span class="i-apps-k">Keeps a copy of chats from</span><span class="app-chip soft">Telegram</span><span class="app-chip soft">Instagram</span><span class="app-chip soft">Signal</span><span class="app-chip soft">Viber</span><span class="app-chip soft">any app that notifies you</span></p>
         </div>
         <ul class="i-trust"><li>Free to start</li><li>No account</li><li>Stays on your phone</li></ul>
       </div>
@@ -323,6 +318,14 @@
 </footer>
 
 <script src="page.js?v=1792471001" defer></script>
+<script>
+// Headline: step through the apps where Recover recognises a deletion. Still for reduced motion.
+(function () {
+  var w = document.querySelectorAll("#rot .rot-w"), i = 0;
+  if (!w.length || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  setInterval(function () { w[i].classList.remove("is-on"); i = (i + 1) % w.length; w[i].classList.add("is-on"); }, 2200);
+})();
+</script>
 <script src="hero.js?v=1792471000" defer></script>
 <script>
 // Pass the visit's utm_* tags on to Google Play, so Play Console shows which post sent the install.
