@@ -63,6 +63,7 @@ p { margin: 0; }
 .i-lead { font-size: clamp(18px, 1.6vw, 22px); color: var(--ink-3); max-width: 32em; margin-top: 20px; }
 .i-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 32px; }
 .i-actions .btn-lg { margin-top: 0; }
+.m-br { display: none; }
 .foot-note { color: var(--ink-3); font-size: 12px; }
 .i-trust { list-style: none; padding: 0; margin: 26px 0 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 22px; font-size: 15px; color: var(--ink-2); }
 .i-trust li::before { content: ""; display: inline-block; width: 7px; height: 12px; margin-right: 10px; border-right: 2px solid #5E9A12; border-bottom: 2px solid #5E9A12; transform: rotate(45deg) translateY(-2px); }
@@ -341,6 +342,7 @@ details p { color: var(--ink-2); padding: 0 4px 24px; }
   .hero { padding-top: 96px; text-align: center; }
   .intro { padding: 24px 0 56px; text-align: center; }
   .i-in { padding-top: 8px; }
+  .m-br { display: inline; }
   .tiles { gap: 10px; margin: 24px 0 30px; }
   .tile { width: calc((100vw - 48px - 30px) / 4); height: calc((100vw - 48px - 30px) / 4); border-radius: 22px; padding-bottom: 9px; }
   .tile b { font-size: 11px; }
