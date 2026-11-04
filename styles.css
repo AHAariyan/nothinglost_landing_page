@@ -664,3 +664,6 @@ summary:hover { color: var(--brand); }
 .tp-list { top: 104px; }
 .tp-empty { margin-top: 70px; }
 .gnav { width: 100px; height: 4.5px; margin-left: -50px; bottom: 8px; }
+/* No camera cut-out: cleaner screens */
+.cam { display: none; }
+.sbar { height: 36px; padding-top: 2px; }
