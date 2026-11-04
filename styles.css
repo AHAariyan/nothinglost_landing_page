@@ -768,3 +768,57 @@ summary:hover { color: var(--brand); }
 .tp .tp-nh img { width: 20px; height: 20px; border-radius: 6px; }
 .tp-nh { display: flex; align-items: center; gap: 8px; font-size: 11.5px; color: #6b6e7c; margin-bottom: 4px; }
 .tp-note p, .tp-note b { font-size: 13px; }
+
+/* ---- The chat app drawn as WhatsApp on Android (current light design; our own wallpaper doodles) ---- */
+.chat-app, .chat-app .c-compose { --wa-green: #1DAB61; --wa-meta: #667781; }
+.c-top { background: #fff; box-shadow: none; border-bottom: 1px solid #f0f2f5; gap: 6px; padding-left: 6px; }
+.c-top .back svg { width: 22px; height: 22px; stroke: #111b21; stroke-width: 2.1; }
+.c-top b { font-size: 16px; font-weight: 500; color: #111b21; }
+.c-top small { color: var(--wa-meta); font-size: 12px; }
+.c-top .acts { gap: 18px; color: #111b21; margin-right: 4px; }
+.c-top .acts svg { width: 21px; height: 21px; stroke-width: 1.8; }
+.av { width: 38px; height: 38px; }
+.c-body { padding: 8px 10px 6px; gap: 3px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120' fill='none' stroke='%23d8cfc0' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 18c4-6 12-6 14 0s-6 10-7 14M21 38v.5'/%3E%3Ccircle cx='86' cy='22' r='7'/%3E%3Cpath d='M82 22h8M86 18v8'/%3E%3Cpath d='M48 60l6-10 6 10zM100 64c0-5 8-5 8 0s-8 9-8 9-8-4-8-9 8-5 8 0'/%3E%3Cpath d='M18 84h14v10H18zM25 84v-4'/%3E%3Ccircle cx='66' cy='100' r='4'/%3E%3Cpath d='M58 100h-4M78 100h-4M66 92v-4M66 112v-4M96 98l10 8M106 98l-10 8'/%3E%3C/svg%3E") 0 0/120px 120px, #efeae2; }
+.c-day { align-self: center; margin: 2px 0 6px; padding: 4px 10px; border-radius: 8px; background: #fff; color: #54656f; font-size: 11px; font-weight: 500; box-shadow: 0 1px .5px rgba(11,20,26,.13); }
+.c-e2e { align-self: center; max-width: 88%; margin-bottom: 8px; padding: 5px 10px; border-radius: 8px; background: #ffeecd; color: #54656f; font-size: 10.5px; line-height: 1.35; text-align: center; }
+.ph-a .c-e2e, .ph-b .c-e2e { display: none; }
+.c-body { justify-content: flex-start; }
+.c-body > .bub:first-of-type { margin-top: auto; }
+.bub { position: relative; font-size: 13.5px; color: #111b21; padding: 6px 8px 5px 9px; border-radius: 8px; box-shadow: 0 1px .5px rgba(11,20,26,.13); margin-bottom: 4px; }
+.bub.in { border-top-left-radius: 0; background: #fff; }
+.bub.out { border-top-right-radius: 0; background: #d9fdd3; }
+.bub.in::before, .bub.out::before { content: ""; position: absolute; top: 0; width: 8px; height: 13px; }
+.bub.in::before { left: -8px; background: #fff; clip-path: polygon(0 0, 100% 0, 100% 100%); }
+.bub.out::before { right: -8px; background: #d9fdd3; clip-path: polygon(0 0, 100% 0, 0 100%); }
+.scene.deleted .bub.new, .scene.deleted .bub.new::before { background: #d9fdd3; }
+.scene.press .bub.new, .scene.press .bub.new::before { background: #b9e6b0; }
+.bub i { font-size: 10.5px; color: var(--wa-meta); margin-top: 1px; }
+.bub.out i::after { width: 16px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 10' fill='none' stroke='%2353bdeb' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 5.5l3 3L10.5 1.5M7.5 8.5l7-7'/%3E%3C/svg%3E"); }
+.bub .gone { color: var(--wa-meta); font-size: 13px; }
+.bub .gone svg { width: 15px; height: 15px; }
+.chat-app .c-compose { background: transparent; padding: 4px 6px 22px; }
+.ph-a .c-compose, .ph-b .b-chat .c-compose { background: transparent; }
+.field { border-radius: 24px; background: #fff; box-shadow: 0 1px .5px rgba(11,20,26,.13); padding: 10px 12px; }
+.f-ic { color: #54656f; }
+.hint { color: #8696a0; }
+.caret { background: var(--wa-green); }
+.send { width: 44px; height: 44px; background: var(--wa-green); box-shadow: 0 1px 2px rgba(11,20,26,.2); }
+.send svg { width: 20px; height: 20px; fill: #fff; stroke: none; }
+.send .i-send { display: none; }
+.scene.typing .ph-a .send .i-send { display: block; } .scene.typing .ph-a .send .i-mic { display: none; }
+.a-dialog .box { border-radius: 26px; }
+.a-dialog b { font-weight: 500; color: #111b21; }
+.opt { color: #008069; font-weight: 500; font-size: 14px; }
+.scene.pick .opt.hit { background: #e7f3ef; }
+/* WhatsApp's mark where the app shows the source app */
+.nt-badge { background: #25D366; }
+.nt-badge .wa { width: 11px; height: 11px; fill: #fff; stroke: none; }
+.d-ic { background: #25D366; box-shadow: 0 6px 16px rgba(37,211,102,.35); }
+.d-ic .wa { width: 30px; height: 30px; fill: #fff; stroke: none; }
+.c-body { justify-content: flex-end; background-color: #efeae2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120' fill='none' stroke='%23e3dbcd' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 18c4-6 12-6 14 0s-6 10-7 14M21 38v.5'/%3E%3Ccircle cx='86' cy='22' r='7'/%3E%3Cpath d='M82 22h8M86 18v8'/%3E%3Cpath d='M48 60l6-10 6 10zM100 64c0-5 8-5 8 0s-8 9-8 9-8-4-8-9 8-5 8 0'/%3E%3Cpath d='M18 84h14v10H18zM25 84v-4'/%3E%3Ccircle cx='66' cy='100' r='4'/%3E%3Cpath d='M58 100h-4M78 100h-4M66 92v-4M66 112v-4M96 98l10 8M106 98l-10 8'/%3E%3C/svg%3E"); }
+.c-body > .bub:first-of-type { margin-top: 0; }
+.chat-app .c-compose, .ph-a .c-compose, .ph-b .b-chat .c-compose { background: #efeae2; }
+.b-chat { background: #efeae2; }
+.b-app-acts span { flex: 1; }
