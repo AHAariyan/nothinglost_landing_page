@@ -572,3 +572,66 @@ summary:hover { color: var(--brand); }
 .su-status:empty { display: none; }
 @media (max-width: 900px) { .su-card { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px; } }
 @media (max-width: 560px) { .su-row { flex-direction: column; } .su-row .btn { justify-content: center; } }
+
+/* ---- Device frame: a modern Android phone (thin bezel, metal rim, punch-hole, status bar, gesture bar, side keys) ---- */
+.ph, .dev { position: relative; }
+.ph::before, .ph::after, .dev::before, .dev::after { content: ""; position: absolute; right: -4px; width: 4px; border-radius: 0 3px 3px 0;
+  background: linear-gradient(90deg, #6d727c, #c9cdd4 45%, #8a8f98); box-shadow: inset 0 0 0 .5px rgba(0,0,0,.25); }
+.ph::before, .dev::before { top: 118px; height: 76px; }
+.ph::after, .dev::after { top: 214px; height: 44px; }
+.screen, .tp { border: 8px solid #0b0b0d; border-radius: 48px; isolation: isolate;
+  box-shadow: 0 0 0 1.5px #2a2c31, 0 0 0 3.5px #a7abb3, 0 0 0 4.5px #50545b,
+              0 50px 80px -30px rgba(20,27,77,.45), 0 24px 40px -24px rgba(0,0,0,.35); }
+.screen::after, .tp::after { content: ""; position: absolute; inset: 0; z-index: 70; pointer-events: none; border-radius: 40px;
+  background: linear-gradient(118deg, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 28%, rgba(255,255,255,0) 72%, rgba(255,255,255,.05) 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06); }
+.cam { position: absolute; top: 9px; left: 50%; z-index: 65; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%;
+  background: radial-gradient(circle at 38% 36%, #4b5d86 0 14%, #16192a 34%, #050507 62%); box-shadow: 0 0 0 1.5px #000; }
+.gnav { position: absolute; bottom: 7px; left: 50%; z-index: 65; width: 92px; height: 4px; margin-left: -46px; border-radius: 4px;
+  background: rgba(20,20,24,.5); transition: background .3s, opacity .3s; }
+
+.sbar { flex: none; position: relative; z-index: 40; height: 30px; display: flex; align-items: center; justify-content: space-between;
+  padding: 2px 22px 0 26px; font: 600 12px/1 Roboto, "Google Sans", -apple-system, system-ui, sans-serif; letter-spacing: .01em;
+  color: #1c1c1f; background: #f5f5f5; transition: color .3s, opacity .3s; }
+.sb-ic { display: flex; align-items: center; gap: 5px; }
+.sbar svg { fill: currentColor; stroke: none; width: auto; height: 10px; }
+.sbar svg:last-child { height: 11px; }
+
+/* Rahim's phone: the bar is part of the chat app */
+.ph-a .c-top { height: 56px; padding: 4px 14px 0; }
+.ph-a .c-compose, .ph-b .c-compose { padding-bottom: 22px; }
+
+/* Your phone: one bar over everything; light on the lock screen, dark in the apps, hidden while asleep */
+.sbar.over { position: absolute; top: 0; left: 0; right: 0; z-index: 60; background: transparent; color: #fff; }
+.ph-b .b-status { display: none; }
+.ph-b .b-lock { padding-top: 34px; }
+.ph-b .b-clock { margin-top: 30px; }
+.ph-b .gnav { background: rgba(255,255,255,.75); }
+.scene:not(.awake) .ph-b .sbar, .scene:not(.awake) .ph-b .gnav { opacity: 0; }
+.scene.chat .ph-b .sbar, .scene.open .ph-b .sbar { color: #1c1c1f; }
+.scene.chat .ph-b .gnav, .scene.open .ph-b .gnav { background: rgba(20,20,24,.5); }
+.ph-b .b-chat .c-top { height: 86px; padding-top: 34px; }
+.ph-b .b-alert { top: 36px; z-index: 55; }
+.ph-b .b-app { padding-top: 40px; }
+
+/* The in-app test phone: Recover's real tabs (Deleted, Chats, Apps, Settings) */
+.tp { height: 560px; }
+.tp-sbar { position: absolute; top: 0; left: 0; right: 0; background: transparent; }
+.tp-screen { padding: 40px 16px 0; }
+.tp-empty { margin-top: 56px; transition: opacity .2s; }
+.tp-list { top: 92px; transition: opacity .2s, transform .2s; }
+.tp.list .tp-list { transition: opacity .45s .25s, transform .45s .25s; }
+.tp-note { top: 36px; z-index: 50; }
+.tp-nav { position: absolute; left: 0; right: 0; bottom: 0; height: 74px; padding: 8px 6px 18px; display: flex; justify-content: space-around;
+  background: #eceef8; font-size: 10.5px; font-weight: 600; color: #5d6172; }
+.tp-nav span { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 25%; }
+.tp-nav i { display: grid; place-items: center; width: 52px; height: 28px; border-radius: 999px; }
+.tp-nav svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.tp-nav .on { color: #1c1c1f; }
+.tp-nav .on i { background: var(--tint); color: var(--brand); }
+.ph-b .b-alert { transform: translateY(-260%); }
+.scene.alert .ph-b .b-alert { transform: none; }
+.scene.open .ph-b .b-alert { transform: translateY(-260%); }
+.tp-note { transform: translateY(-220%); }
+.tp.n1 .tp-n1, .tp.n2 .tp-n2 { transform: none; }
+.tp.n2 .tp-n1, .tp.list .tp-n2 { transform: translateY(-220%); }
