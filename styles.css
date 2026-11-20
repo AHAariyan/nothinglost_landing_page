@@ -870,3 +870,32 @@ summary:hover { color: var(--brand); }
   .ak-date { right: 50%; transform: translateX(60%) rotate(-3deg); bottom: 30px; width: 240px; }
 }
 @media (max-width: 420px) { .ak-meta { white-space: normal; } .ak-date { transform: translateX(50%) rotate(-3deg); } .ak-ph { width: 270px; height: 500px; } }
+
+/* Ask mockup polish: real Recover icon, app tiles and app badges as in the app */
+.ak-kick { display: inline-flex; align-items: center; gap: 8px; }
+.ak-kick img { border-radius: 6px; box-shadow: 0 2px 6px rgba(40,40,110,.2); }
+.ak-app { position: absolute; z-index: 4; top: 120px; left: 0; display: flex; align-items: center; gap: 10px; padding: 10px 16px 10px 10px; border-radius: 20px;
+  background: #fff; box-shadow: 0 16px 36px rgba(40,40,110,.18); transform: rotate(-4deg); font-size: 12px; color: var(--ink-3); }
+.ak-app img { border-radius: 9px; }
+.ak-app b { display: block; font-size: 14px; color: var(--ink); }
+.ak-sb { display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 600; margin: -14px 4px 8px; }
+.ak-sb i { width: 34px; height: 10px; border-radius: 3px; background: linear-gradient(90deg, #1f1f1f 70%, #ccc 0); }
+.ak-top { display: flex; justify-content: space-between; align-items: center; }
+.ak-pro { padding: 5px 12px; border-radius: 999px; background: var(--brand); color: #fff; font-weight: 800; font-size: 11px; }
+.ak-tiles { display: flex; gap: 8px; margin-top: 12px; }
+.ak-tile { flex: 1; display: grid; justify-items: center; gap: 4px; padding: 8px 4px; border-radius: 14px; background: #fff; box-shadow: 0 0 0 1px #e6e8f2; }
+.ak-tile svg { width: 22px; height: 22px; }
+.ak-tile small { font-size: 9.5px; color: var(--ink-2); font-weight: 600; }
+.ak-tile.wa svg { fill: #25D366; } .ak-tile.wb svg { fill: #128C7E; } .ak-tile.ms svg { fill: #0A7CFF; }
+.ak-av { position: relative; }
+.ak-bd { position: absolute; right: -4px; bottom: -4px; width: 16px; height: 16px; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 0 0 2px #fff; }
+.ak-bd svg { width: 9px; height: 9px; fill: #fff; }
+.ak-bd.wa { background: #25D366; }
+.ak-bd.ms { background: linear-gradient(135deg, #00B2FF, #006AFF 55%, #A033FF); }
+.ak-av2 { background: #5B6BD8; }
+@media (max-width: 900px) { .ak-app { top: 90px; left: 4%; } }
+@media (max-width: 420px) { .ak-app { display: none; } }
+@media (min-width: 901px) { .ak-date { right: -60px; bottom: -40px; width: 250px; } .ak-stage { min-height: 640px; } .ak-cap { bottom: -70px; } }
+.ak-row .ak-bd { width: 14px; height: 14px; right: -5px; bottom: -5px; } .ak-row .ak-bd svg { width: 8px; height: 8px; }
+@media (max-width: 420px) { .ak-tip { display: none; } .ak-tiles small { font-size: 8.5px; } }
+@media (min-width: 901px) and (max-width: 1280px) { .ak-date { right: -8px; } .ak-app { left: -10px; } }
