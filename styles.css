@@ -822,3 +822,51 @@ summary:hover { color: var(--brand); }
 .chat-app .c-compose, .ph-a .c-compose, .ph-b .b-chat .c-compose { background: #efeae2; }
 .b-chat { background: #efeae2; }
 .b-app-acts span { flex: 1; }
+
+/* Ask / AI search (1.4.0): drawn mockup, not a screenshot */
+.ak-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+.ak-head { text-align: left; margin: 0; }
+.ak-list { list-style: none; padding: 0; margin: 40px 0 0; display: grid; gap: 22px; }
+.ak-list li { display: flex; gap: 16px; align-items: flex-start; }
+.ak-list h3 { font-size: 18px; }
+.ak-list p { color: var(--ink-2); margin-top: 4px; }
+.ak-ic { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 14px; background: #EFE6FF; color: #4A22B8; }
+.ak-ic svg { width: 22px; height: 22px; fill: currentColor; }
+.ak-ic svg [fill="none"], .ak-ic svg path[stroke] { fill: none; }
+.ak-stage { position: relative; margin: 0; min-height: 600px; display: grid; justify-items: center; align-content: start; padding-top: 40px; }
+.ak-glow { position: absolute; top: 60px; width: 460px; height: 460px; max-width: 100%; border-radius: 50%; background: radial-gradient(circle, #E6DBFF, transparent 70%); }
+.ak-q, .ak-dq { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.ak-q svg, .ak-dq svg { width: 18px; height: 18px; flex: none; fill: none; stroke: var(--brand); stroke-width: 2.6; stroke-linecap: round; }
+.ak-q { position: absolute; z-index: 3; top: 8px; left: 50%; transform: translateX(-62%) rotate(-3deg); padding: 12px 20px; border-radius: 999px; background: #fff;
+  box-shadow: 0 14px 34px rgba(40,40,110,.18); font-size: 15px; white-space: nowrap; }
+.ak-ph { position: relative; z-index: 1; width: 300px; height: 540px; border: 10px solid #1f1f1f; border-radius: 46px; overflow: hidden; background: #f7f5ff;
+  box-shadow: 0 40px 80px rgba(40,40,110,.22); transform: rotate(2deg); }
+.ak-scr { position: absolute; inset: 0; padding: 30px 16px 16px; font-size: 13px; }
+.ak-top b { font-family: "Google Sans", Roboto, -apple-system, sans-serif; font-size: 26px; font-weight: 600; letter-spacing: -.02em; }
+.ak-pill { display: inline-block; margin-top: 12px; padding: 4px 12px; border-radius: 999px; background: #e6e9ff; color: #1F2E9E; font-weight: 700; font-size: 12px; }
+.ak-ai { background: #EFE6FF; color: #4A22B8; }
+.ak-day { margin-top: 14px; font-weight: 700; color: var(--ink-2); font-size: 12px; }
+.ak-card { display: flex; gap: 10px; margin-top: 8px; padding: 12px; border-radius: 18px; background: #ecebf2; }
+.ak-av { flex: none; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 700; }
+.ak-av2 { background: #1f1f1f; } .ak-av3 { background: #1DAB61; }
+.ak-who { display: flex; gap: 6px; align-items: center; } .ak-who b { font-size: 14px; }
+.ak-meta { color: var(--ink-3); font-size: 10.5px; margin-top: 2px; white-space: nowrap; }
+.ak-by { color: #4A22B8; font-weight: 600; }
+.ak-msg { margin-top: 6px; font-size: 14px; }
+.ak-tip { margin-top: 10px; padding: 12px 14px; border-radius: 16px; background: #e0e3ff; color: #1F2E9E; font-size: 12px; }
+.ak-tip b { display: block; font-size: 13px; }
+.ak-box { position: absolute; left: 14px; right: 14px; bottom: 18px; padding: 12px 16px; border-radius: 999px; background: #fff; border: 1px solid #ccc; color: var(--ink); }
+.ak-date { position: absolute; z-index: 2; right: -10px; bottom: 6px; width: 270px; padding: 16px; border-radius: 24px; background: #fff; transform: rotate(-3deg);
+  box-shadow: 0 24px 50px rgba(40,40,110,.2); font-size: 13px; }
+.ak-dq { font-size: 15px; }
+.ak-row { display: flex; gap: 10px; margin-top: 10px; align-items: flex-start; }
+.ak-row .ak-av { width: 28px; height: 28px; font-size: 12px; }
+.ak-cap { position: absolute; bottom: -34px; font-size: 13px; color: var(--ink-3); }
+@media (max-width: 900px) {
+  .ak-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ak-head { text-align: center; margin: 0 auto; }
+  .ak-stage { min-height: 820px; }
+  .ak-q { transform: translateX(-50%) rotate(-3deg); font-size: 13px; }
+  .ak-date { right: 50%; transform: translateX(60%) rotate(-3deg); bottom: 30px; width: 240px; }
+}
+@media (max-width: 420px) { .ak-meta { white-space: normal; } .ak-date { transform: translateX(50%) rotate(-3deg); } .ak-ph { width: 270px; height: 500px; } }
